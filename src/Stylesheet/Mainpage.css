@@ -191,8 +191,7 @@ nav ul li {
 .side-icone {
   position: absolute;
   bottom: 33px;
-
-  left: 248px;
+  right: 6px;
 }
 .video-detail {
   position: absolute;
@@ -320,7 +319,8 @@ video {
   }
   .side-icone {
     bottom: 74px;
-    right: 24px;
+    right: 21px;
+    max-width: 78px;
   }
   header {
     display: none;
