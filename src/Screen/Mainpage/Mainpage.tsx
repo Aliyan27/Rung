@@ -52,7 +52,7 @@ const Mainpage = (prop: prop) => {
     } else {
       if (prop.token !== null) {
         suggestaccount();
-        tagManagerEvents("Landing_On_Home", utm);
+        // tagManagerEvents("Landing_On_Home", utm);
       }
     }
   }, [prop.token]);
@@ -85,6 +85,7 @@ const Mainpage = (prop: prop) => {
   };
 
   const handleHidePopup = () => {
+    tagManagerEvents("Close_Button_Click", utm);
     setMute(false);
     setIsPopupShown(false);
     setShowpopup(false);
@@ -113,6 +114,13 @@ const Mainpage = (prop: prop) => {
   const following = () => {
     tagManagerEvents("Following", utm);
   };
+  const forYouHandler = () => {
+    tagManagerEvents("Foryou", utm);
+  };
+
+  const searchHandler = () => {
+    tagManagerEvents("Search", utm);
+  };
 
   return (
     <>
@@ -122,7 +130,11 @@ const Mainpage = (prop: prop) => {
             <img src={logo} alt="missing" />
           </div>
           <div className="searchbar">
-            <input type="text" placeholder="Search accounts & videos" />
+            <input
+              type="text"
+              placeholder="Search accounts & videos"
+              onClick={searchHandler}
+            />
             <img src={search} alt="missing" />
           </div>
           <div className="profile-img" onClick={handleShowPopup}>
@@ -140,7 +152,10 @@ const Mainpage = (prop: prop) => {
                 <ul>
                   <li>
                     <img src={vector} alt="missing" />
-                    <span className="for-you"> For You</span>
+                    <span className="for-you" onClick={forYouHandler}>
+                      {" "}
+                      For You
+                    </span>
                   </li>
                   <li>
                     <img src={follow} alt="missing" /> Following

@@ -79,6 +79,7 @@ function Landingpagescreen({ token }: props) {
           response.result.msisdn !== null &&
           response.result.isSpecialFlow === false
         ) {
+          tagManagerEvents("He_User", utm);
           setValue(response.result.msisdn);
         } else if (
           response.result.msisdn !== null &&
@@ -97,6 +98,7 @@ function Landingpagescreen({ token }: props) {
           navigate("/pin", { state: data });
         } else {
           console.log("connect to wifi");
+          tagManagerEvents("Wifi_User", utm);
         }
       }
     } catch (error) {}

@@ -98,6 +98,7 @@ const Otpscreen = ({ token }: props) => {
       };
       const response = await fetchApiPost(token, Apiname.verifyOTP, data);
       if (response.status === 0) {
+        tagManagerEvents("Otp_Verified", state.utm);
         let url = window.location.origin;
         let encodedMsisdn = base64_encode(state.value);
         url = `${url}/home?ndsism=${encodedMsisdn}`;
@@ -109,11 +110,13 @@ const Otpscreen = ({ token }: props) => {
         setError(true);
         setErrormessage("Please enter valid OTP");
         setLoading(false);
+        tagManagerEvents("Otp_Failed", state.utm);
       }
     } catch (error) {
       setError(true);
       setErrormessage("Something went wrong, please try again");
       setLoading(false);
+      tagManagerEvents("Otp_Failed", state.utm);
     }
   };
 
@@ -126,6 +129,7 @@ const Otpscreen = ({ token }: props) => {
       };
       const response = await fetchApiPost(token, name, data);
       if (response.result.toLowerCase() === "success") {
+        tagManagerEvents("Subscribe", state.utm);
         let url = window.location.origin;
         let encodedMsisdn = base64_encode(state.value);
         url = `${url}/home?ndsism=${encodedMsisdn}`;
@@ -144,6 +148,7 @@ const Otpscreen = ({ token }: props) => {
   };
 
   const Resend = async () => {
+    tagManagerEvents("Resend_Otp", state.utm);
     try {
       setOtp({
         one: "",
