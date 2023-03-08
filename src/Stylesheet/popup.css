@@ -1,0 +1,62 @@
+.popup {
+  position: fixed;
+  z-index: 1;
+
+  right: 0;
+  top: 127px;
+  background: #ffffff;
+  box-shadow: 1px 4px 12px rgb(0 0 0 / 50%);
+  border-radius: 16px;
+  padding-top: 33px;
+  max-width: 578px;
+  left: 0;
+  margin: 0 auto;
+}
+.popup .Container {
+  display: flex;
+  column-gap: 35px;
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+.popup-detail {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: self-start;
+  width: 50%;
+}
+.popup h2 {
+  font-size: 18px;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.popup p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #252536;
+}
+.popup .btn {
+  max-width: 172px;
+}
+.popup-img {
+  width: 50%;
+  font-size: 0;
+}
+.popup-img img {
+  width: 100%;
+}
+.playstoreimg {
+  width: 30%;
+}
+.playstoreimg img {
+  width: 100%;
+}
+.crosssign {
+  position: absolute;
+  top: -59px;
+  right: 0;
+  left: 0;
+}

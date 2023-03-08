@@ -1,0 +1,119 @@
+.Form {
+  background: #ffffff;
+  box-shadow: 0 0px 7px rgb(0 0 0 / 25%);
+  border-radius: 24px;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+.Form h2 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  margin-bottom: 4px;
+}
+.number-field {
+  display: flex;
+  column-gap: 10px;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+.input::before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to right, #bfcc1e, #1eccd6);
+  border-radius: 40px;
+  padding: 0px 125px;
+  top: 3px;
+  bottom: 3px;
+}
+.number-field span {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 26px;
+  color: #000000;
+  background: #ffffff;
+  box-shadow: 1.35924px 5.43696px 16.3109px rgb(0 0 0 / 20%);
+  border-radius: 16.3109px;
+  padding: 14px 13px;
+}
+.input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.number-field .input input {
+  padding: 10px 0 10px 19px;
+  position: relative;
+  width: 99%;
+  border-radius: 50px;
+  border: 3px solid transparent;
+  outline: none;
+  font-size: 16px;
+  box-shadow: 1.35924px 5.43696px 16.3109px rgb(0 0 0 / 20%);
+}
+
+.Form p {
+  font-size: 10px;
+  text-align: center;
+  font-weight: normal;
+  line-height: 18px;
+  padding-bottom: 10px;
+}
+.Button {
+  font-size: 16px;
+  padding: 6px 0;
+  color: #fff;
+  background-image: linear-gradient(to right, #bfcc1e, #1eccd6);
+  display: flex;
+  justify-content: center;
+  border-radius: 69px;
+  line-height: 24px;
+  cursor: pointer;
+
+  margin: 7px 0 4px 0;
+  font-weight: bold;
+}
+.MainContent {
+  max-width: 350px;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 0 5px;
+}
+.Form .error {
+  font-size: 12px;
+  color: #c70404;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 68px;
+  padding-bottom: 0;
+}
+.lds-dual-ring {
+  display: inline-block;
+  position: relative;
+}
+.lds-dual-ring:after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 13px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+  top: -26px;
+  left: -26px;
+  right: 0;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

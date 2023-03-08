@@ -1,0 +1,64 @@
+.number-field-otp input {
+  border-radius: 10px;
+  padding: 14px 0px;
+  font-size: 16px;
+  border: 1px solid transparent;
+  box-shadow: 1.35924px 5.43696px 16.3109px rgb(0 0 0 / 25%);
+  width: 100%;
+  outline: none;
+  text-align: center;
+}
+.number-field-otp {
+  display: flex;
+  column-gap: 19px;
+  width: 100%;
+  padding: 0px 7px;
+}
+.Form .Container {
+  padding: 0;
+}
+.Form .Container .Otp-p {
+  text-align: center;
+  font-size: 12px;
+}
+.resend {
+  color: rgb(255, 169, 57);
+  padding-left: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.lds-dual-ring {
+  display: inline-block;
+  position: relative;
+}
+.lds-dual-ring:after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 13px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+  top: -26px;
+  left: -26px;
+  right: 0;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.otp-error {
+  font-size: 12px;
+  color: #c70404;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 36px;
+  padding-bottom: 0;
+}

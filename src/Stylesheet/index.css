@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+  font-family: "Proxima Nova Rg";
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 2;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+li {
+  list-style-type: none;
+}
+@font-face {
+  font-family: "Proxima Nova Rg";
+  src: url("../Constant/fonts/ProximaNova-Regular.woff2") format("woff2"),
+    url("../Constant/fonts/ProximaNova-Regular.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
